@@ -84,7 +84,7 @@ namespace ThreeManInABoat
             textInString = sr.ReadToEnd();
             
 
-            foreach (string word in textInString.Split(' '))
+            foreach (string word in textInString.Split(' ', '-', '"', ',', '.', '?', '!', '[', ']', '(', ')', '_', '*', '—', '“', '#', '”', ':', ';'))
             {
                 if (!stringHash.Contains(word) && !Unwanted.Contains(word))
                 {
